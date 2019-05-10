@@ -1,4 +1,4 @@
-# TinyFox.WebSocket
-WebSocket For TinyFox Or Other OWIN Server.
+# TinyFox.FastWebApi
+WebApi For TinyFox Or Any OWIN Host Server.
 
-TinyFox.WebSocket是一款工作在 TinyFox 或者其它 OWIN 宿主服务器上的 WebSocket 服务器端类库。
+为TinyFox准备的高性能 WebApi 框架，同时与支持所有的符合OWIN 1.0/1.1 标准的 OWIN 宿主服务器。
