@@ -1,4 +1,4 @@
 # TinyFox.FastWebApi
-WebApi For TinyFox Or Any OWIN Host Server.
+WEBAPI FOR TINYFOX OR ANY OWIN HOST SERVER.
 
-为TinyFox准备的高性能 WebApi 框架，同时与支持所有的符合OWIN 1.0/1.1 标准的 OWIN 宿主服务器。
+为 TinyFox 准备的轻量级 WebApi 应用框架，同时该框架也支持所有的符合 OWIN 1.0/1.1 标准的 OWIN 宿主服务器。
