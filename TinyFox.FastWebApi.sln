@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTest", "WebApiTest\WebApiTest.csproj", "{B94BA8DF-BE00-4C16-ADA0-7BF4EB1AC2FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyFox.FastWebApi", "FastWebApi\TinyFox.FastWebApi.csproj", "{F9367B19-874E-4049-9CBF-A631DB9B0BBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B94BA8DF-BE00-4C16-ADA0-7BF4EB1AC2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94BA8DF-BE00-4C16-ADA0-7BF4EB1AC2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94BA8DF-BE00-4C16-ADA0-7BF4EB1AC2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94BA8DF-BE00-4C16-ADA0-7BF4EB1AC2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9367B19-874E-4049-9CBF-A631DB9B0BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9367B19-874E-4049-9CBF-A631DB9B0BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9367B19-874E-4049-9CBF-A631DB9B0BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9367B19-874E-4049-9CBF-A631DB9B0BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D86C35C-EA7F-42C3-B500-8233C595B0C4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net451; netstandard2.0</TargetFrameworks>
+    <AssemblyName>TinyFox.FastWebApi</AssemblyName>
+    <RootNamespace>TinyFox.FastWebApi</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>www.linuxdot.net</Copyright>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Authors>LiuBing</Authors>
+    <Description>FastWebApi For TinyFox</Description>
+    <Company>www.linuxdot.net</Company>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <!--
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net451|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net451|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+-->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Owin" Version="4.0.1" />
+  </ItemGroup>
+
+</Project>
