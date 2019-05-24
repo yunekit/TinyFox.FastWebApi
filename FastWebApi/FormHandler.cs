@@ -293,7 +293,7 @@ namespace TinyFox.FastWebApi
         {
             if (charset == null) charset = Encoding.UTF8;
 
-            //ContentType = "application/x-www-form-urlencoded;charset=utf8"; 
+            // ContentType = "application/x-www-form-urlencoded;charset=utf8"; 
             // name=value&name1=value1
 
             var src_string = Encoding.ASCII.GetString(body);
@@ -305,7 +305,7 @@ namespace TinyFox.FastWebApi
                 var pos = kv.IndexOf('=');
                 if (pos < 1) continue;
 
-                var key = kv.Substring(pos).Trim();
+                var key = kv.Substring(0, pos).Trim();
                 if (string.IsNullOrEmpty(key)) continue;
 
                 var val = kv.Substring(pos + 1).Trim();
@@ -319,13 +319,10 @@ namespace TinyFox.FastWebApi
 
 
 
-        /// <summary>
-        /// 双回车
-        /// </summary>
         private static readonly byte[] _byt_crlf2 = new byte[] { 0x0d, 0x0a, 0x0d, 0x0a };
 
         /// <summary>
-        /// 查找第一个又回车
+        /// 查找第一个双回车
         /// </summary>
         /// <param name="byts"></param>
         /// <returns></returns>
