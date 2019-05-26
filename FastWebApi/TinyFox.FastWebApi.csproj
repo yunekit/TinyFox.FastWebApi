@@ -10,6 +10,8 @@
     <Authors>LiuBing</Authors>
     <Description>FastWebApi For TinyFox</Description>
     <Company>www.linuxdot.net</Company>
+    <Version>1.0.1</Version>
+    <PackageProjectUrl>https://github.com/yunekit/TinyFox.FastWebApi</PackageProjectUrl>
   </PropertyGroup>
 
 
