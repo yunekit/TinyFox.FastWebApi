@@ -97,10 +97,11 @@ namespace TinyFox.FastWebApi
         {
             if (context.Request.Method.ToUpper() != "POST") throw new Exception();
             var strLen = context.Request.Headers["Content-Length"];
+            if (string.IsNullOrEmpty(strLen)) strLen = context.Request.Headers["content-length"];
             if (string.IsNullOrEmpty(strLen)) throw new Exception("Not 'Content-Length'");
             if (!uint.TryParse(strLen, out uint sumsize)) throw new Exception("Content-Length Error");
             if (string.IsNullOrEmpty(context.Request.ContentType)) throw new Exception("Error:ContentType is NULL.");
-
+            
 
             //把数据读到缓冲区以备处理
             var buffer = new MemoryStream();
