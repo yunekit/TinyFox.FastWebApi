@@ -101,7 +101,7 @@ namespace TinyFox.FastWebApi
             if (string.IsNullOrEmpty(strLen)) throw new Exception("Not 'Content-Length'");
             if (!uint.TryParse(strLen, out uint sumsize)) throw new Exception("Content-Length Error");
             if (string.IsNullOrEmpty(context.Request.ContentType)) throw new Exception("Error:ContentType is NULL.");
-            
+
 
             //把数据读到缓冲区以备处理
             var buffer = new MemoryStream();
@@ -134,7 +134,7 @@ namespace TinyFox.FastWebApi
                     //Content-Type:multipart/form-data; boundary=abcdef
                     var ss = s.Trim().ToLower();
                     if (ss == "multipart/form-data") ism = true;
-                    if (ss.StartsWith("boundary=")) boundar = "--" + s.Substring(9).Trim();
+                    if (ss.StartsWith("boundary=")) boundar = "--" + s.Substring(s.IndexOf('=') + 1).Trim();
                 }
 
                 //如果是，处理
