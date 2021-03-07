@@ -238,20 +238,10 @@ namespace TinyFox.FastWebApi
             foreach (var s in strHandles)
             {
                 var ss = s.Trim();
-
-                //解析 Content-Type
-                //if (ss.StartsWith("Content-Type:")) {
-                //    //Content-Type: text/plain; charset=UTF-8
-                //    //Content-Type: application/octet-stream
-                //    var ctyp = ss.Substring(13).Trim();
-                //    var ctypItems = ctyp.Split(';', StringSplitOptions.RemoveEmptyEntries);
-                //    foreach(){}
-                //}
-
                 //Content-Transfer-Encoding: binary
                 //正文编码方式
 
-                //关键看正文描述
+                //处理正文描述
                 if (ss.StartsWith("Content-Disposition:"))
                 {
                     var disp = ss.Substring(20).Trim();
