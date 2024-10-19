@@ -165,7 +165,7 @@ namespace TinyFox.FastWebApi
         {
             get
             {
-                if (string.IsNullOrEmpty(key)|| _sessionItem==null) return null;
+                if (string.IsNullOrEmpty(key) || _sessionItem == null) return null;
                 var u_dict = _sessionItem.SessionValues;
                 _sessionItem.LastReadWriteTime = DateTime.Now.Ticks / 10000 / 1000;
                 if (!u_dict.TryGetValue(key, out object ov)) return null;

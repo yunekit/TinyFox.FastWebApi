@@ -45,7 +45,7 @@ namespace TinyFox.FastWebApi
         /// <summary>
         /// 保存表单域的字典
         /// </summary>
-        private IDictionary<string, FormItem> _dictionary = new Dictionary<string, FormItem>();
+        private readonly IDictionary<string, FormItem> _dictionary = new Dictionary<string, FormItem>();
 
 
         /// <summary>
