@@ -8,6 +8,9 @@ using System.IO;
 namespace TinyFox.FastWebApi
 {
 
+    /// <summary>
+    /// URL编/解码助手
+    /// </summary>
     public class UrlHelper
     {
 
@@ -228,7 +231,6 @@ namespace TinyFox.FastWebApi
                 output.Append(GetChars(acc, e));
             }
 
-            acc = null;
             return output.ToString();
         }
 
