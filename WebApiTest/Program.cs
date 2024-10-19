@@ -24,6 +24,16 @@ namespace WebApiTest
 
             //停止OWIN服务
             TinyFoxService.Stop();
+
+
         }
+
+
+
+
+
+
+
     }
+
 }
