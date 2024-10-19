@@ -1,6 +1,7 @@
 ﻿
 #region <USINGs>
 
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
@@ -21,7 +22,7 @@ namespace TinyFox.FastWebApi
         /// <summary>
         /// 下一个“中间件”对象
         /// </summary>
-        OwinMiddleware _next;
+        readonly OwinMiddleware _next;
 
         /// <summary>
         /// 构造函数，第一个参数必须为 OwinMiddleware对象
@@ -49,16 +50,17 @@ namespace TinyFox.FastWebApi
                 if (headers != null && headers.ContainsKey("X-Original-For"))
                 {
                     var ipaddAdndPort = headers["X-Original-For"];
-                    var dot = ipaddAdndPort.IndexOf(":");
+                    var colon = ipaddAdndPort.LastIndexOf(":");
                     var ip = ipaddAdndPort;
                     var port = 0;
-                    if (dot > 0)
+
+                    if (colon > 0)
                     {
-                        ip = ipaddAdndPort.Substring(0, dot);
-                        port = int.Parse(ipaddAdndPort.Substring(dot + 1));
+                        ip = ipaddAdndPort.Substring(0, colon).Trim(new[] { '[', ']', '\x20' });
+                        port = int.Parse(ipaddAdndPort.Substring(colon + 1));
                     }
 
-                    owinContext.Request.RemoteIpAddress = System.Net.IPAddress.Parse(ip).ToString();
+                    owinContext.Request.RemoteIpAddress = IPAddress.Parse(ip).ToString();
                     if (port != 0) owinContext.Request.RemotePort = port;
                 }
 
