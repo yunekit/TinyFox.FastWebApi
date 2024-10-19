@@ -26,13 +26,13 @@ namespace TinyFox.FastWebApi
         /// <summary>
         /// 下一个“中间件”对象
         /// </summary>
-        OwinMiddleware _next;
+        readonly OwinMiddleware _next;
 
 
         /// <summary>
         /// 路由类
         /// </summary>
-        IWebApiRouter _router;
+        readonly IWebApiRouter _router;
 
         /// <summary>
         /// 构造函数，第一个参数必须为 OwinMiddleware对象
