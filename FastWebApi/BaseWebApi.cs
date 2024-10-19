@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.Owin;
 
 namespace TinyFox.FastWebApi
@@ -14,7 +15,7 @@ namespace TinyFox.FastWebApi
         /// <summary>
         /// 请求（输入）对象
         /// </summary>
-        protected  IOwinRequest Request;
+        protected IOwinRequest Request;
 
         /// <summary>
         /// 应答（输出）对象
@@ -30,6 +31,23 @@ namespace TinyFox.FastWebApi
         /// 用户级Session
         /// </summary>
         protected HttpSession Session;
+
+        /// <summary>
+        /// 路由参数
+        /// </summary>
+        protected readonly IDictionary<string, string> RouteArgs = new Dictionary<string, string>();
+
+
+        /// <summary>
+        /// 添加路由参数
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        internal void AddRouteArgs(string key, string value)
+        {
+            RouteArgs[key] = value;
+        }
+
 
         /// <summary>
         /// 处理请求

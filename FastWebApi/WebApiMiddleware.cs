@@ -54,6 +54,7 @@ namespace TinyFox.FastWebApi
         {
             var app = _router.RouteTo(c);
             if (app == null) return _next.Invoke(c);
+
             return app.ProcessRequest(c);
         }
 
